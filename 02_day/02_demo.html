@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Document</title>
-    <style media="screen">
-      img{
-        width: 550px;
-        height:366px
-      }
-    </style>
-  </head>
-  <body>
-    <a href="#" id="link">切换图片</a>
-    <img src="img/01.jpg" alt="图片不见了">
-    <script type="text/javascript">
-      //获取超链
-      var link = document.getElementById('link');
-      //给超链接注册点击事件
-      link.onclick = function(){
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <style media="screen">
+  </style>
+</head>
+
+<body>
+  <a href="#" id="link">切换图片</a>
+  <br>
+  <img id="img" src="img/01.jpg" alt="图片不见了">
+  <script type="text/javascript">
+    //获取超链
+    var link = document.getElementById('link');
+    var flag = 1 //flag = 1显示01.jpg flag = 2 显示02jpg.jpg
+    //给超链接注册点击事件
+    link.onclick = function() {
       //切换图片
-
+      var img = document.getElementById('img');
+      img.src = 'img/03.jpg'
       //取消a标签的默认行为
-        return false;
-      };
+      return false;
+    }
+  </script>
+</body>
 
-    </script>
-  </body>
 </html>
