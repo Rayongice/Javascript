@@ -20,7 +20,14 @@
     link.onclick = function() {
       //切换图片
       var img = document.getElementById('img');
-      img.src = 'img/03.jpg'
+      if (flag === 1){
+        flag = 2;
+        img.src = 'img/02.jpg';
+      }else{
+        flag = 1;
+        img.src = 'img/01.jpg'
+      }
+
       //取消a标签的默认行为
       return false;
     }
