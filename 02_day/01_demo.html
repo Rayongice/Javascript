@@ -5,14 +5,19 @@
     <title></title>
   </head>
   <body>
-    <div>11111</div>
-    <div class="a">222222</div>
-    <div class="b">333333</div>
-    <div>pppppppp</div>
+    <input type="button" id="btn" value="点我">
     <script type="text/javascript">
-      //返回集合
-      var div = document.getElementsByClassName()[0];
-      console.log(div);
+      //根据id获取按钮元素
+      var btn = document.getElementById('btn');
+      //给按钮注册事件
+      //on 当什么时候 click 点击
+      btn.onclick = function(){
+        //匿名函数
+        
+      }
+
+      //事件的三要素：事件源，事件名称，事件处理函数
+      btn.onclick
     </script>
 
   </body>
