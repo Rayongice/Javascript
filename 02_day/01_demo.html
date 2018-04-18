@@ -5,15 +5,19 @@
     <title></title>
   </head>
   <body>
-    <input type="button" id="btn" value="点我">
+    <a id="link" href="www.baidu.com">fasdfasdf</a>
     <script type="text/javascript">
+      //可以给所有网页上可见的元素注册事件
       //根据id获取按钮元素
-      var btn = document.getElementById('btn');
+      var link = document.getElementById('link');
       //给按钮注册事件
       //on 当什么时候 click 点击
-      btn.onclick = function(){
+      link.onclick = function(){
         //匿名函数
-        
+        alert("Hello");
+
+      //取消后续内容(默认行为)的执行
+        return false;
       }
 
       //事件的三要素：事件源，事件名称，事件处理函数
