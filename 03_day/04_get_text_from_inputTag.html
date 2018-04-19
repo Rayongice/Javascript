@@ -39,8 +39,26 @@
           continue;
         }
         input.value = i + 1;
-
       }
+      //2.点击按钮获取文本框种的内容， 并用 | 分割形成一个新的字符串
+    var btn = document.getElementById('btn');
+    btn.onclick = function() {
+      //找到所有的文本框获取文本框的值
+      var str = '';
+      for(i = 0; i < len; i++){
+        var input = inputs[i];
+        //判断是否是文本框
+        if (input.type !== 'text') {
+          continue;
+        }
+        str += input.value + '|';
+      }
+      str = str.substr(0, str.length - 1);
+      console.log(str);
+    }
+
+
+
     </script>
 
 
