@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Album</title>
+    <style media="screen">
+      body {
+        font-family: "Hevetica", "Arial", serif;
+        color:#333;
+        background-color: #ccc;
+        margin: 1em 10%;
+      }
+      h2 {
+        color: #333;
+        background-color: transparent;
+      }
+      a {
+        color: #c60;
+        background-color: transparent;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        float: left;
+        padding: 1em;
+        list-style: none;
+      }
+      #imagallery a{
+        margin: 0px 20px 20px 0px;
+        padding: 0px;
+        display: inline;;
+      }
+      #imagallery a img {
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+  <h2>
+    画廊
+  </h2>
+  <div id="imagallery">
+    <a href="img/01.jpg" title="车1"><img src="img/02_small.png" alt="" width='120px'>
+    </a>
+    <a href="img/02.jpg" title="车2"><img src="img/02_small.png" alt="" width='120px'>
+    </a>
+    <a href="img/03.jpg" title="车3"><img src="img/03_small.png" alt="" width='120px'>
+    </a>
+  </div>
+
+  <div style="clear:both"></div>
+
+  <img src="" id="image" alt="请点击图片" width="450px">
+
+  <p id="des">选择一个图片</p>
+  <script type="text/javascript">
+    //1获取所有的a标签 对应的元素
+    var imagallery = document.getElementById('imagallery');
+    var links = imagallery.getElementsByTagName('a');
+    //2给所有的a元素注册点击事件
+    // for (var i = 0; len = links.length; i < len; i++){
+    //
+    // }
+    var i = 0; len = links.length;
+    for(;i < len; i++) {
+        //获取当前元素
+        var link = links[i];
+        link.onclick = function() {
+          var image = document.getElementById('image')
+          var des = document.getElementById('des')
+          //3切换图片和文字
+          image.src = this.href;
+          des.innerText = this.title;
+          //取消a标签的默认行为
+          return false;
+        }
+    }
+
+  </script>
+
+  </body>
+</html>
