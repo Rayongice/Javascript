@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>理解innerText</title>
+  </head>
+  <body>
+    <div id="box">
+      我是box里面的p标签<p>我是一个段落</p>
+    </div>
+    <!-- 转义字符显示标签，显示空格， 显示版本符号 -->
+    &lt;p&gt; &nbsp; &copy;
+    <script type="text/javascript">
+      var box = document.getElementById('box');
+      //1.获取标签之间的内容
+      //innerHTML 获取内容的时候，会把标签也获取的，它不是标准的DOM属性
+      //innerText是最早IE增加的属性，老版本的firefox不支持此属性(textContent)
+      // console.log(box.innerHTML)
+      // console.log(box.innerText);
+    </script>
+
+  </body>
+</html>
