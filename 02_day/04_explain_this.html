@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <style media="screen">
+    #box{
+      width: 200px;
+      height:200px;
+      background-color: red;
+    }
+    .hidden{
+      display: none;
+    }
+    .show{
+      display: block;
+    }
+  </style>
+  <body>
+    <input id="btn" type="button" value="隐藏">
+    <div id="box"></div>
+    <script type="text/javascript">
+    //获取元素
+    var btn = document.getElementById('btn');
+    var isShow = true;
+  //给按钮注册事件
+    btn.onclick = function() {
+      var box = document.getElementById('box');
+      if(isShow) {
+        box.className = 'hidden';
+        this.value = "显示";
+        isShow = false;
+      }else{
+        box.className = 'show';
+        //在事件处理函数中 this--在事件处理中是事件源 触发事件的时候
+        this.value = "隐藏";
+        isShow = true;
+      }
+    };
+
+
+//函数中的this -->window对象
+function fu() {
+  console.log(this);
+}
+fu();
+//方法中的this --> 是调用方法的对象
+var obj = {
+  name = 'ice',
+  say = function() {
+    console.log(this);
+  }
+}
+//构造函数中this  -->当前对象
+
+//事件处理中this --> 触发事件的对象 事件源
+    </script>
+  </body>
+</html>
