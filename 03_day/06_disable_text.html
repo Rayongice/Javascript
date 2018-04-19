@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id='txt' name="" value="">
+    <input type="button" id='btn' value="禁用">
+    <script type="text/javascript">
+      var btn = document.getElementById('btn');
+      btn.onclick = function() {
+        //
+        var txt = document.getElementById('txt');
+        //禁用文本框
+        //当标签的属性只有一个值的情况下，一般DOM元素对应的此属性的类型是
+        //布尔类型
+        txt.disabled = true;
+      }
+    </script>
+
+  </body>
+</html>
