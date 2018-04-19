@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="radio">
+    <br>
+    <input type="button" value="按钮" id="btn">
+    <br>
+
+    <script type="text/javascript">
+      //设置文本框种得内容
+      var inputs= document.getElementsByTagName('input');
+      var i = 0, len = inputs.length;
+      for(; i < len; i++) {
+        //获取集合种的元素
+        var input = inputs[i];
+        //判断当前的input是否是文本框
+        if (input.type === 'text') {
+          input.value = i + 1;
+        }
+
+      }
+    </script>
+
+
+  </body>
+</html>
