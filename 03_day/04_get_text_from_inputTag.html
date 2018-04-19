@@ -30,9 +30,15 @@
         //获取集合种的元素
         var input = inputs[i];
         //判断当前的input是否是文本框
-        if (input.type === 'text') {
-          input.value = i + 1;
+        // if (input.type === 'text') {
+        //   input.value = i + 1;
+        // }
+
+        if (input.type !== 'text'){
+          //不是文本框
+          continue;
         }
+        input.value = i + 1;
 
       }
     </script>
