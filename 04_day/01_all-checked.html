@@ -36,6 +36,19 @@
           checkbox.checked = null;
          }
       };
+      //反选
+      btn3.onclick = function() {
+        var i = 0, len = checkboxes.length;
+        for(; i < len; i++) {
+          var checkbox = checkboxes[i];
+          if(checkbox.checked){
+            checkbox.checked = null;
+          }else{
+            checkbox.checked = 'true';
+          }
+
+         }
+      }
 
     </script>
   </body>
