@@ -3,19 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="js/jquery-2.1.1.js">
+    <script src="../js/jquery-2.1.1.js">
+
+    </script>
+    <script type="text/javascript">
+      var arrays=new Array(
+       '1','2','3','4','5','6','7','8','9','0',
+       'a','b','c','d','e','f','g','h','i','j',
+       'k','l','m','n','o','p','q','r','s','t',
+       'u','v','w','x','y','z',
+       'A','B','C','D','E','F','G','H','I','J',
+       'K','L','M','N','O','P','Q','R','S','T',
+       'U','V','W','X','Y','Z'
+       );
+       $(function(){
+         function create_code() {
+           var code = '';
+           for(var i = 0; i < 6; i++){
+             var index = parseInt(Math.random() * arrays.length);
+             code += arrays[index];
+           }
+           return code;
+         };
+         $('#code').text(create_code());
+         $('input[name="btn"]').click(function() {
+           $("#code").text(create_code());
+         });
+
+       });
 
     </script>
     <style media="screen">
-      #id{
+      #code{
         height: 60px;
         width: 80px;
         background: gray;
       }
     </style>
-    <script type="text/javascript">
 
-    </script>
   </head>
   <body>
     <div id="code"></div>
