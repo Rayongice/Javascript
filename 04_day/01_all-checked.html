@@ -10,11 +10,25 @@
     <input type="checkbox" name="items" value="名车">名车
     <input type="checkbox" name="items" value="豪宅">豪宅
     <br>
-    <input type="button" id="" value="全选">
-    <input type="button" id="" value="全不选">
-    <input type="button" id="" value="反选">
+    <input type="button" id="checkAll" value="全选">
+    <input type="button" id="noCheck" value="全不选">
+    <input type="button" id="Invert" value="反选">
     <script type="text/javascript">
-      
+      //获取按钮
+      var btn1 = document.getElementById('checkAll');
+      var btn2 = document.getElementById('noCheck');
+      var btn3 = document.getElementById('Invert');
+      //全选
+      btn1.onclick = function() {
+        //获取所有checkbox
+        var checkboxes = document.getElementsByName('items');
+        var i = 0, len = checkboxes.length;
+        for(; i < len; i++) {
+          var checkbox = checkboxes[i];
+          checkbox.checked = 'true';
+        }
+      };
+
     </script>
   </body>
 </html>
