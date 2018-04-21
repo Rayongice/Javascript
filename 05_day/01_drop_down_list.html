@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drop Down List</title>
+  </head>
+  <body>
+    <select name="" id="sel">
+      <option value="">请随机选择</option>
+
+      <option value="">回锅肉盖饭</option>
+      <option value="">宫保鸡丁盖饭</option>
+      <option value="">热干面</option>
+      <option value="">大米粥</option>
+      <input type="button" id="btn" name="" value="吃什么">
+
+    </select>
+    <script>
+
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      //获取元素注册事件
+      var btn = document.getElementById('btn');
+      btn.onclick = function() {
+        //让某个option选中
+        // var op = document.getElementById('op');
+        // op.selected = true;
+
+        var sel = document.getElementById('sel');
+        var options = sel.getElementsByTagName('option');
+
+        //生成随机索引
+        var index = getRandom(1, options.length - 1);
+        //根据所以获取索引
+        options[index].selected = true;
+
+      }
+    </script>
+  </body>
+</html>
